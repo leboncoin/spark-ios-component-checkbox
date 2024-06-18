@@ -3,47 +3,51 @@ configurations:
       include:
         - Sources/
       exclude:
-        - Sources/Spark___COMPONENT_NAME___Testing/
-        - Sources/Spark___COMPONENT_NAME___SnapshotTesting/
+        - Sources/SparkCheckboxTesting/
+        - Sources/SparkCheckboxSnapshotTesting/
     templates:
       - .sourcery/template/SparkAutoMockable.stencil
-    output: Sources/Spark___COMPONENT_NAME___Testing/Generated/AutoMockable.generated.swift
+    output: Sources/SparkCheckboxTesting/Generated/AutoMockable.generated.swift
     args:
       autoMockableImports: [Combine, SparkTheming]
-      autoMockableTestableImports: [Spark___COMPONENT_NAME___]
+      autoMockableSPIImports: [SparkCommon, SparkCommonTesting, SparkThemingTesting]
+      autoMockableTestableImports: [SparkCheckbox]
   - sources:
       include:
         - Sources/
       exclude:
-        - Sources/Spark___COMPONENT_NAME___Testing/
-        - Sources/Spark___COMPONENT_NAME___SnapshotTesting/
+        - Sources/SparkCheckboxTesting/
+        - Sources/SparkCheckboxSnapshotTesting/
     templates:
       - .sourcery/template/SparkAutoMockTest.stencil
-    output: Sources/Spark___COMPONENT_NAME___Testing/Generated/AutoMockTest.generated.swift
+    output: Sources/SparkCheckboxTesting/Generated/AutoMockTest.generated.swift
     args:
       autoMockableImports: [Combine, SparkTheming]
-      autoMockableTestableImports: [Spark___COMPONENT_NAME___]
+      autoMockableSPIImports: [SparkCommon, SparkCommonTesting, SparkThemingTesting]
+      autoMockableTestableImports: [SparkCheckbox]
   - sources:
       include:
         - Sources/
       exclude:
-        - Sources/Spark___COMPONENT_NAME___Testing/
-        - Sources/Spark___COMPONENT_NAME___SnapshotTesting/
+        - Sources/SparkCheckboxTesting/
+        - Sources/SparkCheckboxSnapshotTesting/
     templates:
       - .sourcery/template/SparkAutoPublisherTest.stencil
-    output: Sources/Spark___COMPONENT_NAME___Testing/Generated/AutoPublisherTest.generated.swift
+    output: Sources/SparkCheckboxTesting/Generated/AutoPublisherTest.generated.swift
     args:
       autoMockableImports: [Combine, SparkTheming]
-      autoMockableTestableImports: [Spark___COMPONENT_NAME___]
+      autoMockableSPIImports: [SparkCommon, SparkCommonTesting, SparkThemingTesting]
+      autoMockableTestableImports: [SparkCheckbox]
   - sources:
       include:
         - Sources/
       exclude:
-        - Sources/Spark___COMPONENT_NAME___Testing/
-        - Sources/Spark___COMPONENT_NAME___SnapshotTesting/
+        - Sources/SparkCheckboxTesting/
+        - Sources/SparkCheckboxSnapshotTesting/
     templates:
       - .sourcery/template/SparkAutoViewModelStub.stencil
-    output: Sources/Spark___COMPONENT_NAME___Testing/Generated/AutoViewModelStub.generated.swift
+    output: Sources/SparkCheckboxTesting/Generated/AutoViewModelStub.generated.swift
     args:
       autoMockableImports: [Combine, SparkTheming]
-      autoMockableTestableImports: [Spark___COMPONENT_NAME___]
+      autoMockableSPIImports: [SparkCommon, SparkCommonTesting, SparkThemingTesting]
+      autoMockableTestableImports: [SparkCheckbox]

@@ -3,92 +3,93 @@
 
 import PackageDescription
 
+// swiftlint:disable all
 let package = Package(
-    name: "Spark___COMPONENT_NAME___",
+    name: "SparkCheckbox",
     platforms: [
         .iOS(.v15)
     ],
     products: [
         .library(
-            name: "Spark___COMPONENT_NAME___",
-            targets: ["Spark___COMPONENT_NAME___"]
+            name: "SparkCheckbox",
+            targets: ["SparkCheckbox"]
         ),
         .library(
-            name: "Spark___COMPONENT_NAME___Testing",
-            targets: ["Spark___COMPONENT_NAME___Testing"]
+            name: "SparkCheckboxTesting",
+            targets: ["SparkCheckboxTesting"]
         )
     ],
     dependencies: [
        .package(
            url: "https://github.com/adevinta/spark-ios-common.git",
            // path: "../spark-ios-common"
-           branch: "main"
+           /*version*/ "0.0.1"..."999.999.999"
        ),
        .package(
            url: "https://github.com/adevinta/spark-ios-theming.git",
            // path: "../spark-ios-theming"
-           branch: "main"
+           /*version*/ "0.0.1"..."999.999.999"
        )
     ],
     targets: [
         .target(
-            name: "Spark___COMPONENT_NAME___",
+            name: "SparkCheckbox",
             dependencies: [
                 .product(
                     name: "SparkCommon",
-                    package: "spm-poc-common"
+                    package: "spark-ios-common"
                 ),
                 .product(
                     name: "SparkTheming",
-                    package: "spm-poc-theming"
+                    package: "spark-ios-theming"
                 )
             ]
         ),
         .target(
-            name: "Spark___COMPONENT_NAME___Testing",
+            name: "SparkCheckboxTesting",
             dependencies: [
-                "Spark___COMPONENT_NAME___",
+                "SparkCheckbox",
                 .product(
                     name: "SparkCommon",
-                    package: "spm-poc-common"
+                    package: "spark-ios-common"
                 ),
                 .product(
                     name: "SparkCommonTesting",
-                    package: "spm-poc-common"
+                    package: "spark-ios-common"
                 ),
                 .product(
                     name: "SparkThemingTesting",
-                    package: "spm-poc-theming"
+                    package: "spark-ios-theming"
                 ),
                 .product(
                     name: "SparkTheme",
-                    package: "spm-poc-theming"
+                    package: "spark-ios-theming"
                 )
             ]
         ),
         .testTarget(
-            name: "Spark___COMPONENT_NAME___UnitTests",
+            name: "SparkCheckboxUnitTests",
             dependencies: [
-                "Spark___COMPONENT_NAME___",
-                "Spark___COMPONENT_NAME___Testing",
+                "SparkCheckbox",
+                "SparkCheckboxTesting",
                 .product(
                     name: "SparkCommonTesting",
-                    package: "spm-poc-common"
+                    package: "spark-ios-common"
                 ),
                 .product(
                     name: "SparkThemingTesting",
-                    package: "spm-poc-theming"
+                    package: "spark-ios-theming"
                 )
             ]
         ),
         .testTarget(
-            name: "Spark___COMPONENT_NAME___SnapshotTests",
+            name: "SparkCheckboxSnapshotTests",
             dependencies: [
-                "Spark___COMPONENT_NAME___",
-                "Spark___COMPONENT_NAME___Testing",
+                "SparkCheckbox",
+                "SparkCheckboxTesting",
                 .product(
                     name: "SparkCommonSnapshotTesting",
-                    package: "spm-poc-common"
+                    package: "spark-ios-common"
                 ),
             ]
         ),
