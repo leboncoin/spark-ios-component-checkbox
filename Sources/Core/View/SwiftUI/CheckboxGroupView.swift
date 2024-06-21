@@ -28,7 +28,6 @@ public struct CheckboxGroupView: View {
     @State private var viewWidth: CGFloat = 0
     @State private var isScrollableHStack: Bool = true
 
-
     // MARK: - Initialization
 
     /// Initialize a group of one or multiple checkboxes.
