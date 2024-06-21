@@ -56,7 +56,6 @@ class CheckboxControlUIView: UIView {
         }
     }
 
-
     // MARK: - Private Properties.
     @ScaledUIMetric private var cornerRadius: CGFloat = Constants.cornerRadius
     @ScaledUIMetric private var cornerRadiusPressed: CGFloat = Constants.cornerRadiusPressed
