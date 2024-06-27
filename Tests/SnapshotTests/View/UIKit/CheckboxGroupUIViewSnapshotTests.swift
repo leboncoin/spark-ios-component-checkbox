@@ -11,7 +11,7 @@ import UIKit
 @testable import SparkCheckbox
 @_spi(SI_SPI) import SparkCommonSnapshotTesting
 @_spi(SI_SPI) import SparkCommon
-import SparkThemingTesting
+@_spi(SI_SPI) import SparkThemingTesting
 import SparkTheming
 import SparkTheme
 

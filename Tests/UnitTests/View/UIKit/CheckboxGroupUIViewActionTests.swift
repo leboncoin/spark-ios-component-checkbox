@@ -12,7 +12,7 @@ import XCTest
 @_spi(SI_SPI) @testable import SparkCheckboxTesting
 @_spi(SI_SPI) import SparkCommon
 @_spi(SI_SPI) import SparkCommonTesting
-import SparkThemingTesting
+@_spi(SI_SPI) import SparkThemingTesting
 import SparkTheming
 import SparkTheme
 
@@ -46,10 +46,10 @@ final class CheckboxGroupUIViewActionTests: TestCase {
 
         var selectionState: CheckboxSelectionState = .indeterminate
 
-        sut.publisher.sink { items in
+        sut.publisher.sink(receiveValue: { items in
             selectionState = items[0].selectionState
             exp.fulfill()
-        }
+        })
         .store(in: &self.subscriptions)
 
         sut.checkboxes[0].sendActions(for: .touchUpInside)
