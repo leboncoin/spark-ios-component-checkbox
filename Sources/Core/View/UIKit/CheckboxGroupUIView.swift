@@ -246,7 +246,7 @@ public final class CheckboxGroupUIView: UIControl {
             if let text = item.title {
                 content = .left(NSAttributedString(string: text))
             } else {
-              content = .left(item.attributedTitle)
+                content = .left(item.attributedTitle)
             }
 
             let checkbox = CheckboxUIView(
@@ -260,7 +260,7 @@ public final class CheckboxGroupUIView: UIControl {
             )
             checkbox.accessibilityIdentifier = CheckboxAccessibilityIdentifier.checkboxGroupItem(item.id)
 
-            checkbox.publisher.sink { [weak self] in
+            checkbox.publisher.sink(receiveValue: { [weak self] in
                 guard
                     let self,
                     let index = self.items.firstIndex(where: { $0.id == item.id})
@@ -272,7 +272,7 @@ public final class CheckboxGroupUIView: UIControl {
                 self.delegate?.checkboxGroup(self, didChangeSelection: self.items)
                 self.subject.send(self.items)
                 self.sendActions(for: .valueChanged)
-            }
+            })
             .store(in: &self.subscriptions)
 
             self.itemsStackView.addArrangedSubview(checkbox)
