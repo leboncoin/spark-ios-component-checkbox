@@ -3,7 +3,7 @@
 //  SparkCheckboxTests
 //
 //  Created by michael.zimmermann on 14.07.23.
-//  Copyright © 2023 Adevinta. All rights reserved.
+//  Copyright © 2023 Leboncoin. All rights reserved.
 //
 
 import Combine
