@@ -1,6 +1,6 @@
 //
 //  CheckboxGroupUIViewActionTests.swift
-//  SparkCheckboxTests
+//  SparkComponentCheckboxTests
 //
 //  Created by michael.zimmermann on 14.07.23.
 //  Copyright © 2023 Leboncoin. All rights reserved.
@@ -8,8 +8,8 @@
 
 import Combine
 import XCTest
-@testable import SparkCheckbox
-@_spi(SI_SPI) @testable import SparkCheckboxTesting
+@testable import SparkComponentCheckbox
+@_spi(SI_SPI) @testable import SparkComponentCheckboxTesting
 @_spi(SI_SPI) import SparkCommon
 @_spi(SI_SPI) import SparkCommonTesting
 @_spi(SI_SPI) import SparkThemingTesting

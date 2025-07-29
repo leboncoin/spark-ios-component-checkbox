@@ -1,6 +1,6 @@
 //
 //  CheckboxGroupUIView.swift
-//  SparkCheckbox
+//  SparkComponentCheckbox
 //
 //  Created by janniklas.freundt.ext on 19.04.23.
 //  Copyright © 2023 Leboncoin. All rights reserved.

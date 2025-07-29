@@ -1,13 +1,13 @@
 //
 //  CheckboxScenarioSnapshotTests.swift
-//  Spark
+//  SparkComponentCheckbox
 //
 //  Created by alican.aycil on 12.01.24.
 //  Copyright © 2024 Leboncoin. All rights reserved.
 //
 
 import UIKit
-@testable import SparkCheckbox
+@testable import SparkComponentCheckbox
 @_spi(SI_SPI) import SparkCommonSnapshotTesting
 
 enum CheckboxScenarioSnapshotTests: String, CaseIterable {
