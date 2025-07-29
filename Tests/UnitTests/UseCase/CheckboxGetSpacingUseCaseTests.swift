@@ -1,13 +1,13 @@
 //
 //  CheckboxGetSpacingUseCaseTests.swift
-//  SparkCheckboxUnitTests
+//  SparkComponentCheckboxUnitTests
 //
 //  Created by Michael Zimmermann on 17.11.23.
 //  Copyright © 2023 Leboncoin. All rights reserved.
 //
 
 import XCTest
-@testable import SparkCheckbox
+@testable import SparkComponentCheckbox
 @_spi(SI_SPI) import SparkThemingTesting
 
 final class CheckboxGetSpacingUseCaseTests: XCTestCase {

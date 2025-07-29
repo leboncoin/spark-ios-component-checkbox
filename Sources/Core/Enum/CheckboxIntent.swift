@@ -1,6 +1,6 @@
 //
 //  CheckboxIntent.swift
-//  SparkCheckbox
+//  SparkComponentCheckbox
 //
 //  Created by alican.aycil on 12.09.23.
 //  Copyright © 2023 Leboncoin. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  CheckboxViewModelTests.swift
-//  SparkCheckbox
+//  SparkComponentCheckbox
 //
 //  Created by janniklas.freundt.ext on 17.04.23.
 //  Copyright © 2023 Leboncoin. All rights reserved.
@@ -9,7 +9,7 @@
 import Combine
 import SwiftUI
 import XCTest
-@testable import SparkCheckbox
+@testable import SparkComponentCheckbox
 @_spi(SI_SPI) import SparkCommon
 @_spi(SI_SPI) import SparkCommonTesting
 @_spi(SI_SPI) import SparkThemingTesting

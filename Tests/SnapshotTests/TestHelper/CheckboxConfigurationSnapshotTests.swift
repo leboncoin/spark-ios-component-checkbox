@@ -1,6 +1,6 @@
 //
 //  CheckboxConfigurationSnapshotTests.swift
-//  SparkCheckboxSnapshotTests
+//  SparkComponentCheckboxSnapshotTests
 //
 //  Created by alican.aycil on 16.01.24.
 //  Copyright © 2024 Leboncoin. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 import SwiftUI
-@testable import SparkCheckbox
+@testable import SparkComponentCheckbox
 @_spi(SI_SPI) import SparkCommonSnapshotTesting
 
 struct CheckboxConfigurationSnapshotTests {

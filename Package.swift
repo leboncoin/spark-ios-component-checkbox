@@ -5,18 +5,18 @@ import PackageDescription
 
 // swiftlint:disable all
 let package = Package(
-    name: "SparkCheckbox",
+    name: "SparkComponentCheckbox",
     platforms: [
         .iOS(.v16)
     ],
     products: [
         .library(
-            name: "SparkCheckbox",
-            targets: ["SparkCheckbox"]
+            name: "SparkComponentCheckbox",
+            targets: ["SparkComponentCheckbox"]
         ),
         .library(
-            name: "SparkCheckboxTesting",
-            targets: ["SparkCheckboxTesting"]
+            name: "SparkComponentCheckboxTesting",
+            targets: ["SparkComponentCheckboxTesting"]
         )
     ],
     dependencies: [
@@ -33,7 +33,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "SparkCheckbox",
+            name: "SparkComponentCheckbox",
             dependencies: [
                 .product(
                     name: "SparkCommon",
@@ -47,9 +47,9 @@ let package = Package(
             path: "Sources/Core"
         ),
         .target(
-            name: "SparkCheckboxTesting",
+            name: "SparkComponentCheckboxTesting",
             dependencies: [
-                "SparkCheckbox",
+                "SparkComponentCheckbox",
                 .product(
                     name: "SparkCommon",
                     package: "spark-ios-common"
@@ -70,10 +70,10 @@ let package = Package(
             path: "Sources/Testing"
         ),
         .testTarget(
-            name: "SparkCheckboxUnitTests",
+            name: "SparkComponentCheckboxUnitTests",
             dependencies: [
-                "SparkCheckbox",
-                "SparkCheckboxTesting",
+                "SparkComponentCheckbox",
+                "SparkComponentCheckboxTesting",
                 .product(
                     name: "SparkCommonTesting",
                     package: "spark-ios-common"
@@ -86,10 +86,10 @@ let package = Package(
             path: "Tests/UnitTests"
         ),
         .testTarget(
-            name: "SparkCheckboxSnapshotTests",
+            name: "SparkComponentCheckboxSnapshotTests",
             dependencies: [
-                "SparkCheckbox",
-                "SparkCheckboxTesting",
+                "SparkComponentCheckbox",
+                "SparkComponentCheckboxTesting",
                 .product(
                     name: "SparkCommonSnapshotTesting",
                     package: "spark-ios-common"
