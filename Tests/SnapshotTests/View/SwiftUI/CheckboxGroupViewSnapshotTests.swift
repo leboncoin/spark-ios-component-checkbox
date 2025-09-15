@@ -43,7 +43,7 @@ final class CheckboxGroupViewSnapshotTests: SwiftUIComponentSnapshotTestCase {
 
 private struct CheckboxGroupContainerView: View {
 
-    private let theme: Theme = SparkTheme.shared
+    private let theme: any Theme = SparkTheme.shared
     let configuration: CheckboxGroupConfigurationSnapshotTests
 
     @Binding var items: [any CheckboxGroupItemProtocol]

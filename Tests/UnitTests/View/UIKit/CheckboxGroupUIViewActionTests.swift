@@ -18,7 +18,7 @@ import SparkTheme
 
 final class CheckboxGroupUIViewActionTests: TestCase {
     // MARK: Private Properties
-    private var theme: Theme!
+    private var theme: (any Theme)!
     private var subscriptions: Set<AnyCancellable>!
     // swiftlint:disable weak_delegate
     private var delegate: CheckboxGroupUIViewDelegateGeneratedMock!

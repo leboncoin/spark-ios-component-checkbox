@@ -10,11 +10,11 @@ import Foundation
 import SparkTheming
 
 protocol CheckboxGetSpacingUseCaseable {
-    func execute(layoutSpacing: LayoutSpacing, alignment: CheckboxAlignment) -> CGFloat
+    func execute(layoutSpacing: any LayoutSpacing, alignment: CheckboxAlignment) -> CGFloat
 }
 
 struct CheckboxGetSpacingUseCase: CheckboxGetSpacingUseCaseable {
-    func execute(layoutSpacing: LayoutSpacing, alignment: CheckboxAlignment) -> CGFloat {
+    func execute(layoutSpacing: any LayoutSpacing, alignment: CheckboxAlignment) -> CGFloat {
         switch alignment {
         case .left: return layoutSpacing.medium
         case .right: return layoutSpacing.xxxLarge

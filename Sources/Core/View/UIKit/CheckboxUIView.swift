@@ -13,6 +13,7 @@ import UIKit
 import SparkTheming
 
 /// The `CheckboxUIView`renders a single checkbox using UIKit.
+@available(*, deprecated, message: "Use SparkUICheckbox instead !")
 public final class CheckboxUIView: UIControl {
 
     // MARK: - Private Properties.
@@ -109,7 +110,7 @@ public final class CheckboxUIView: UIControl {
     }
 
     /// Returns the theme of the checkbox.
-    public var theme: Theme {
+    public var theme: any Theme {
         get {
             return self.viewModel.theme
         }
@@ -187,7 +188,7 @@ public final class CheckboxUIView: UIControl {
     ///   - selectionState: `CheckboxSelectionState` is either selected, unselected or indeterminate.
     ///   - alignment: Positions the checkbox on the leading or trailing edge of the view.
     public convenience init(
-        theme: Theme,
+        theme: any Theme,
         intent: CheckboxIntent = .main,
         text: String,
         checkedImage: UIImage,
@@ -216,7 +217,7 @@ public final class CheckboxUIView: UIControl {
     ///   - selectionState: `CheckboxSelectionState` is either selected, unselected or indeterminate.
     ///   - alignment: Positions the checkbox on the leading or trailing edge of the view.
     public convenience init(
-        theme: Theme,
+        theme: any Theme,
         intent: CheckboxIntent = .main,
         attributedText: NSAttributedString,
         checkedImage: UIImage,
@@ -236,7 +237,7 @@ public final class CheckboxUIView: UIControl {
     }
 
     init(
-        theme: Theme,
+        theme: any Theme,
         intent: CheckboxIntent = .main,
         content: Either<NSAttributedString?, String?>,
         checkedImage: Either<UIImage, Image>,

@@ -27,7 +27,7 @@ final class CheckboxViewModel: ObservableObject {
     @Published var selectionState: CheckboxSelectionState
     @Published var opacity: CGFloat
     @Published var spacing: CGFloat
-    @Published var font: TypographyFontToken
+    @Published var font: any TypographyFontToken
 
     @Published var intent: CheckboxIntent {
         didSet {
@@ -43,7 +43,7 @@ final class CheckboxViewModel: ObservableObject {
         }
     }
 
-    var theme: Theme {
+    var theme: any Theme {
         didSet {
             self.font = self.theme.typography.body1
             self.updateColors()
@@ -61,7 +61,7 @@ final class CheckboxViewModel: ObservableObject {
     init(
         text: Either<NSAttributedString?, String?>,
         checkedImage: Either<UIImage, Image>,
-        theme: Theme,
+        theme: any Theme,
         intent: CheckboxIntent = .main,
         colorsUseCase: CheckboxColorsUseCaseable = CheckboxColorsUseCase(),
         spacingUseCase: CheckboxGetSpacingUseCaseable = CheckboxGetSpacingUseCase(),

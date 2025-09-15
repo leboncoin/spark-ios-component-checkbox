@@ -11,6 +11,7 @@ import SwiftUI
 import SparkTheming
 
 /// The `CheckboxGroupView` renders a group containing of multiple`CheckboxView`-views. It supports a title, different layout and positioning options.
+@available(*, deprecated, message: "Use SparkCheckboxGroup instead !")
 public struct CheckboxGroupView: View {
 
     // MARK: - Private properties
@@ -46,7 +47,7 @@ public struct CheckboxGroupView: View {
         items: Binding<[any CheckboxGroupItemProtocol]>,
         layout: CheckboxGroupLayout = .vertical,
         alignment: CheckboxAlignment,
-        theme: Theme,
+        theme: any Theme,
         intent: CheckboxIntent = .main,
         accessibilityIdentifierPrefix: String
     ) {
@@ -75,7 +76,7 @@ public struct CheckboxGroupView: View {
         items: Binding<[any CheckboxGroupItemProtocol]>,
         layout: CheckboxGroupLayout = .vertical,
         alignment: CheckboxAlignment,
-        theme: Theme,
+        theme: any Theme,
         intent: CheckboxIntent = .main
     ) {
         let viewModel = CheckboxGroupViewModel(
