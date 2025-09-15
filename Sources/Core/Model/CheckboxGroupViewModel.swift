@@ -17,18 +17,18 @@ final class CheckboxGroupViewModel: ObservableObject {
     @Published var title: String?
     @Published var checkedImage: Image
     @Published var layout: CheckboxGroupLayout
-    @Published var spacing: LayoutSpacing
-    @Published var titleFont: TypographyFontToken
+    @Published var spacing: any LayoutSpacing
+    @Published var titleFont: any TypographyFontToken
     @Published var titleColor: any ColorToken
     @Published var intent: CheckboxIntent
     @Published var alignment: CheckboxAlignment
-    var theme: Theme
+    var theme: any Theme
 
     // MARK: - Init
     init(
         title: String?,
         checkedImage: Image,
-        theme: Theme,
+        theme: any Theme,
         intent: CheckboxIntent = .main,
         alignment: CheckboxAlignment = .left,
         layout: CheckboxGroupLayout = .vertical

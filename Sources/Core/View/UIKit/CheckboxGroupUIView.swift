@@ -74,7 +74,7 @@ public final class CheckboxGroupUIView: UIControl {
         return self.subject
     }
 
-    @Published public var theme: Theme {
+    @Published public var theme: any Theme {
         didSet {
             self.updateTheme()
         }
@@ -165,7 +165,7 @@ public final class CheckboxGroupUIView: UIControl {
         items: [any CheckboxGroupItemProtocol],
         layout: CheckboxGroupLayout = .vertical,
         alignment: CheckboxAlignment = .left,
-        theme: Theme,
+        theme: any Theme,
         intent: CheckboxIntent = .main,
         accessibilityIdentifierPrefix: String
     ) {
@@ -195,7 +195,7 @@ public final class CheckboxGroupUIView: UIControl {
         items: [any CheckboxGroupItemProtocol],
         layout: CheckboxGroupLayout = .vertical,
         alignment: CheckboxAlignment = .left,
-        theme: Theme,
+        theme: any Theme,
         intent: CheckboxIntent = .main
     ) {
         self.title = title

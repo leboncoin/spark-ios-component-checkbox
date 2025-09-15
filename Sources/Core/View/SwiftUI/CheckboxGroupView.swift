@@ -47,7 +47,7 @@ public struct CheckboxGroupView: View {
         items: Binding<[any CheckboxGroupItemProtocol]>,
         layout: CheckboxGroupLayout = .vertical,
         alignment: CheckboxAlignment,
-        theme: Theme,
+        theme: any Theme,
         intent: CheckboxIntent = .main,
         accessibilityIdentifierPrefix: String
     ) {
@@ -76,7 +76,7 @@ public struct CheckboxGroupView: View {
         items: Binding<[any CheckboxGroupItemProtocol]>,
         layout: CheckboxGroupLayout = .vertical,
         alignment: CheckboxAlignment,
-        theme: Theme,
+        theme: any Theme,
         intent: CheckboxIntent = .main
     ) {
         let viewModel = CheckboxGroupViewModel(
