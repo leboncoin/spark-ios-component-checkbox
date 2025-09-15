@@ -11,6 +11,7 @@ import SwiftUI
 import SparkTheming
 
 /// The `CheckboxGroupView` renders a group containing of multiple`CheckboxView`-views. It supports a title, different layout and positioning options.
+@available(*, deprecated, message: "Use SparkCheckboxGroup instead !")
 public struct CheckboxGroupView: View {
 
     // MARK: - Private properties

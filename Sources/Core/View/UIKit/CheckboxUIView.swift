@@ -13,6 +13,7 @@ import UIKit
 import SparkTheming
 
 /// The `CheckboxUIView`renders a single checkbox using UIKit.
+@available(*, deprecated, message: "Use SparkUICheckbox instead !")
 public final class CheckboxUIView: UIControl {
 
     // MARK: - Private Properties.

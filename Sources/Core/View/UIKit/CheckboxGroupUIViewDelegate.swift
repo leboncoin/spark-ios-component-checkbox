@@ -10,6 +10,7 @@ import Foundation
 
 /// The checkbox groupe delegate informs about a changes to any of the checkbox selection state.
 // sourcery: AutoMockable
+@available(*, deprecated, message: "Not used anymore on the new SparkUICheckboxGroup")
 public protocol CheckboxGroupUIViewDelegate: AnyObject {
     /// The checkbox group selection was changed.
     /// - Parameters:

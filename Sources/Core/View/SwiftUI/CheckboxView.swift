@@ -11,6 +11,7 @@ import SwiftUI
 import SparkTheming
 
 /// The `CheckboxView`renders a single checkbox.
+@available(*, deprecated, message: "Use SparkCheckbox instead !")
 public struct CheckboxView: View {
 
     // MARK: - Constants

@@ -13,6 +13,7 @@ import UIKit
 import SparkTheming
 
 /// The `CheckboxGroupUIView` renders a group containing of multiple`CheckboxUIView`-views. It supports a title, different layout and positioning options.
+@available(*, deprecated, message: "Use SparkUICheckboxGroup instead !")
 public final class CheckboxGroupUIView: UIControl {
     // MARK: - Private properties.
 

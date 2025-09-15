@@ -10,6 +10,7 @@ import Foundation
 
 /// The checkbox delegate informs about a new checkbox selection state.
 // sourcery: AutoMockable
+@available(*, deprecated, message: "Not used anymore on the new SparkUICheckboxUIView")
 public protocol CheckboxUIViewDelegate: AnyObject {
     /// The checkbox selection was changed.
     /// - Parameters:
