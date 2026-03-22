@@ -35,14 +35,6 @@ final class CheckboxColorsUseCaseTests: XCTestCase {
             let expectedColors: CheckboxColors
 
             switch $0 {
-            case .basic:
-                expectedColors = CheckboxColors(
-                    textColor: theme.colors.base.onSurface,
-                    borderColor: theme.colors.base.outline,
-                    tintColor: theme.colors.basic.basic,
-                    iconColor: theme.colors.basic.onBasic,
-                    pressedBorderColor: theme.colors.basic.basicContainer
-                )
             case .accent:
                 expectedColors = CheckboxColors(
                     textColor: theme.colors.base.onSurface,

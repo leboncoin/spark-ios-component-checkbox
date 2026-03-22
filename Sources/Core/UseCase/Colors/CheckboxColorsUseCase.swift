@@ -17,14 +17,6 @@ struct CheckboxColorsUseCase: CheckboxColorsUseCaseable {
 
     func execute(from colors: any Colors, intent: CheckboxIntent) -> CheckboxColors {
         switch intent {
-        case .basic:
-            return CheckboxColors(
-                textColor: colors.base.onSurface,
-                borderColor: colors.base.outline,
-                tintColor: colors.basic.basic,
-                iconColor: colors.basic.onBasic,
-                pressedBorderColor: colors.basic.basicContainer
-            )
         case .accent:
             return CheckboxColors(
                 textColor: colors.base.onSurface,

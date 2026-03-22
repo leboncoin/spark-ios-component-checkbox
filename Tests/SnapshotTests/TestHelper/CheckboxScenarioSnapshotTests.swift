@@ -87,7 +87,7 @@ enum CheckboxScenarioSnapshotTests: String, CaseIterable {
             states.map { state in
                 return CheckboxConfigurationSnapshotTests.init(
                     scenario: self,
-                    intent: .basic,
+                    intent: .main,
                     selectionState: selectionState,
                     state: state,
                     alignment: .left,

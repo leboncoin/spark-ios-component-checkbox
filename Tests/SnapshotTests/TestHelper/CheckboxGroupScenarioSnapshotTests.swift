@@ -62,7 +62,7 @@ enum CheckboxGroupScenarioSnapshotTests: String, CaseIterable {
         return alignments.map { alignment in
             .init(
                 scenario: self,
-                intent: .basic,
+                intent: .main,
                 alignment: alignment,
                 axis: .vertical,
                 items: items,

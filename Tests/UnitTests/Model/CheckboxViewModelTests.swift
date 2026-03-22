@@ -100,7 +100,7 @@ final class CheckboxViewModelTests: XCTestCase {
         let sut = self.sut(isEnabled: true, attributeText: NSAttributedString("Text"))
         var isColorsUpdated = false
         // When
-        sut.intent = .basic
+        sut.intent = .accent
 
         let expectation = expectation(description: "Colors are updates")
 
