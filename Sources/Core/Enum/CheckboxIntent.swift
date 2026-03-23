@@ -10,13 +10,12 @@ import Foundation
 
 /// The various intent color a checkbox may have.
 public enum CheckboxIntent: CaseIterable {
-    case basic
     case accent
-    case error
-    case success
     case alert
+    case error
     case info
-    case neutral
-    case support
     case main
+    case neutral
+    case success
+    case support
 }

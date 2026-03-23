@@ -44,7 +44,7 @@ final class CheckboxViewSnapshotTests: SwiftUIComponentSnapshotTestCase {
                 self.selectionState = configuration.selectionState
 
                 let checkboxView = CheckboxView(
-                    text: configuration.text,
+                    text: configuration.textType.value,
                     checkedImage: Image(uiImage: configuration.image),
                     alignment: configuration.alignment,
                     theme: self.theme,
@@ -54,7 +54,7 @@ final class CheckboxViewSnapshotTests: SwiftUIComponentSnapshotTestCase {
                 )
                 .background(Color(UIColor.systemBackground))
 
-                let view = self.view(text: configuration.text, checkbox: checkboxView)
+                let view = self.view(text: configuration.textType.value, checkbox: checkboxView)
 
                 self.assertSnapshot(
                     matching: view,

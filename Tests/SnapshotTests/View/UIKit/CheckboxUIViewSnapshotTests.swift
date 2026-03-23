@@ -33,7 +33,7 @@ final class CheckboxUIViewSnapshotTests: UIKitComponentSnapshotTestCase {
                 let view = CheckboxUIView(
                     theme: self.theme,
                     intent: configuration.intent,
-                    text: configuration.text,
+                    text: configuration.textType.value,
                     checkedImage: configuration.image,
                     isEnabled: configuration.state == .disabled ? false : true,
                     selectionState: configuration.selectionState,

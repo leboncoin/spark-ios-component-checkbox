@@ -31,7 +31,8 @@ struct CheckboxGroupConfigurationSnapshotTests {
             "\(self.scenario.rawValue)",
             "\(self.intent)",
             "\(self.alignment)",
-            "\(self.axis)"
+            "\(self.axis)",
+            "\(self.items.count)Items"
         ].joined(separator: "-")
     }
 }
