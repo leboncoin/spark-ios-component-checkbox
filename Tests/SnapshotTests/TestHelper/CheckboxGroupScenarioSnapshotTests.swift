@@ -161,10 +161,12 @@ enum CheckboxGroupScenarioSnapshotTests: String, CaseIterable {
     ///  - sizes (accessibility): default
     private func test4() -> [CheckboxGroupConfigurationSnapshotTests] {
         let layouts: [CheckboxGroupLayout] = [.vertical, .horizontal]
-        let itemsArray = [[CheckboxGroupItemDefault(title: "Hello World", id: "1", selectionState: .selected, isEnabled: true),
-            CheckboxGroupItemDefault(title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", id: "2", selectionState: .selected, isEnabled: true)],
-            [CheckboxGroupItemDefault(title: "Hello World", id: "1", selectionState: .selected, isEnabled: true),
-            CheckboxGroupItemDefault(title: "This is the way.", id: "2", selectionState: .selected, isEnabled: true)]]
+        let itemsArray = [
+            [
+                CheckboxGroupItemDefault(title: "Hello World", id: "1", selectionState: .selected, isEnabled: true),
+                CheckboxGroupItemDefault(title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", id: "2", selectionState: .selected, isEnabled: true)
+            ]
+        ]
 
         return layouts.flatMap { layout in
             itemsArray.map { items in

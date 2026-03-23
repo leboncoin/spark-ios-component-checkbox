@@ -20,7 +20,7 @@ struct CheckboxConfigurationSnapshotTests {
     let selectionState: CheckboxSelectionState
     let state: CheckboxState
     let alignment: CheckboxAlignment
-    let text: String
+    let textType: TextType
     let image: UIImage
     let modes: [ComponentSnapshotTestMode]
     let sizes: [UIContentSizeCategory]
@@ -33,7 +33,8 @@ struct CheckboxConfigurationSnapshotTests {
             "\(self.intent)",
             "\(self.selectionState)",
             "\(self.state)",
-            "\(self.alignment)"
+            "\(self.alignment)",
+            "\(self.textType)"
         ].joined(separator: "-")
     }
 }
@@ -42,4 +43,18 @@ enum CheckboxState: CaseIterable {
     case enabled
     case disabled
     case pressed
+}
+
+enum TextType: CaseIterable {
+    case normal
+    case long
+
+    var value: String {
+        switch self {
+        case .normal:
+            "Hello World"
+        case .long:
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        }
+    }
 }

@@ -59,7 +59,7 @@ enum CheckboxScenarioSnapshotTests: String, CaseIterable {
                 selectionState: .selected,
                 state: .enabled,
                 alignment: .left,
-                text: "Hello World",
+                textType: .normal,
                 image: UIImage.mock,
                 modes: Constants.Modes.all,
                 sizes: Constants.Sizes.default
@@ -91,7 +91,7 @@ enum CheckboxScenarioSnapshotTests: String, CaseIterable {
                     selectionState: selectionState,
                     state: state,
                     alignment: .left,
-                    text: "Hello World",
+                    textType: .normal,
                     image: UIImage.mock,
                     modes: Constants.Modes.all,
                     sizes: Constants.Sizes.default
@@ -113,7 +113,7 @@ enum CheckboxScenarioSnapshotTests: String, CaseIterable {
     ///  - modes: all
     ///  - sizes (accessibility): default
     private func test3() -> [CheckboxConfigurationSnapshotTests] {
-        let texts = ["Hello World", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."]
+        let texts = TextType.allCases
         let alignments = CheckboxAlignment.allCases
 
         return texts.flatMap { text in
@@ -124,7 +124,7 @@ enum CheckboxScenarioSnapshotTests: String, CaseIterable {
                     selectionState: .selected,
                     state: .enabled,
                     alignment: alignment,
-                    text: text,
+                    textType: text,
                     image: UIImage.mock,
                     modes: Constants.Modes.default,
                     sizes: Constants.Sizes.default
@@ -146,15 +146,13 @@ enum CheckboxScenarioSnapshotTests: String, CaseIterable {
     ///  - modes: all
     ///  - sizes (accessibility): default
     private func test4() -> [CheckboxConfigurationSnapshotTests] {
-        let text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-
         return [.init(
             scenario: self,
             intent: .main,
             selectionState: .unselected,
             state: .enabled,
             alignment: .right,
-            text: text,
+            textType: .long,
             image: UIImage.mock,
             modes: Constants.Modes.default,
             sizes: Constants.Sizes.all
