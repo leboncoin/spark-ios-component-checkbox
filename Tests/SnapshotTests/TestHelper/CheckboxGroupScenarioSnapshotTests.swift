@@ -44,7 +44,7 @@ enum CheckboxGroupScenarioSnapshotTests: String, CaseIterable {
     /// Description: To test spacing
     ///
     /// Content:
-    ///  - intent: basic
+    ///  - intent: support
     ///  - alignment: all
     ///  - axis: vertical
     ///  - items: contents of single checkbox component
